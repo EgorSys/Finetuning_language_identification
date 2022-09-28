@@ -1,0 +1,10 @@
+torchaudio==0.10.2
+ffmpeg-python==0.2.0
+PyYAML==5.4.1
+speechbrain
+torch
+numpy
+pydub
+panns_inference
+python-multipart
+requests

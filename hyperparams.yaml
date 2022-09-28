@@ -1,0 +1,13 @@
+old_model: voxlingua
+new_model: new_model
+data_path: commonvoice
+data_val_path: test_files
+
+audio_preprocessing: False
+n_workers: 10
+
+model_training: True
+number_of_epochs: 3
+batch_size: 20
+lr: 0.001
+lr_final: 0.0001

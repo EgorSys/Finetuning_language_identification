@@ -1,0 +1,17 @@
+version: '2.3'
+
+services:
+  finetuning:
+    restart: always
+    container_name: finetuning
+    build:
+      context: .
+      dockerfile: Dockerfile
+    runtime: nvidia
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=all
+    image: finetuning:latest
+    volumes:
+      - .:/finetuning
+    command: bash -c "CUDA_VISIBLE_DEVICES=9,12,13,14 python3 finetune.py hyperparams.yaml --data_parallel_backend"
+    network_mode: host
